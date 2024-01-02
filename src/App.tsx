@@ -1,16 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
+import { Header } from "./components/Header";
+
+import "./global.css";
 
 export const App = () => (
   <Router>
     <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/opportunities" element={<Opportunities />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/solutions" element={<Solutions />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/opportunities" element={<Opportunities />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/solutions" element={<Solutions />} />
+      </Routes>
+    </main>
   </Router>
 );
 
