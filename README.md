@@ -1,5 +1,3 @@
 # Animated Menu with React , Gsap & TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
+This animated menu has been made with React , Greensock Library (GSAP) & TailwindCSS
