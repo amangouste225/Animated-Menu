@@ -15,18 +15,21 @@ const locations: { city: string; id: number; img: string }[] = [
 ];
 export const Hamburger = () => {
   return (
-    <div className="absolute w-screen h-screen left-0 top-0 bg-red">
-      <div className="wrapper grid md:grid-cols-2 grid-cols-1 gap-20 content-center items-center		h-full">
+    <div className="absolute w-screen h-screen left-0 top-0 bg-red z-10">
+      <div className="wrapper grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-y-10 content-center items-center h-full">
         <div className="col-span-2 md:col-span-1">
           {menu.map(({ name, id, href }) => (
             <ul key={id} className="text-white hover:text-black">
-              <li className="xl:text-10xl text-6xl font-bold font-secondary leading-tight">
-                <Link to={href}> {name}</Link>
+              <li className="xl:text-10xl text-6xl font-bold font-secondary leading-tight relative">
+                <Link to={href}>
+                  <span className="menuIds">{id}</span>
+                  {name}
+                </Link>
               </li>
             </ul>
           ))}
         </div>
-        <div className="text-white xl:ml-44 md:ml-32 ">
+        <div className="text-white xl:ml-44 md:ml-10">
           <h5 className="font-bold text-2xl font-secondary mb-5">
             Our promises
           </h5>
@@ -37,18 +40,13 @@ export const Hamburger = () => {
             obcaecati tempora. Ipsa, reiciendis hic?
           </p>
         </div>
-        <ul className="md:col-span-1 col-span-2 text-white self-end flex justify-between items-center flex-wrap">
-          <li>
-            <span className="font-black text-xl font-secondary">
-              Locations :
-            </span>
-          </li>
+        <ul className="lg:col-span-1 col-span-2 text-white absolute bottom-10 flex gap-3 lg:gap-20 justify-between items-center flex-wrap">
           {locations.map(({ city, id }) => (
-            <>
-              <li key={id} className="font-primary text-bold">
+            <div>
+              <li key={id} className="font-primary text-bold flex">
                 {city}
               </li>
-            </>
+            </div>
           ))}
         </ul>
       </div>

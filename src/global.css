@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@300;500;800;900&display=swap');
 
 :root {
     --white: #f7f1f1;
@@ -19,38 +19,45 @@ body {
 }
 
 .wrapper {
-    padding: 20px;
     margin: 0 auto;
     max-width: 1440px;
+    padding: 0 20px;
 }
 
-.logo::before {
+.logo_black::before {
     content: '';
     width: 50px;
     height: 4px;
     background-color: var(--black);
     position: absolute;
-    top: 100%
+    top: 100%;
+}
+
+.logo_white::before {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
 }
 
 .logo_hover {
     position: relative;
-    padding: 0 10px;
-    display: inline-block;
+    padding: 0 5px;
+    display: inline;
 }
 
-.logo_hover::before {
+
+
+.menuIds {
+    position: relative;
+}
+
+.menuIds {
+    font-size: 20px;
     position: absolute;
-    width: 100%;
-    background-color: var(--black);
-    height: 1px;
-    content: '';
-    bottom: 5%;
-    z-index: 0;
-    left: 0%;
-}
-
-.logo_hover:hover {
-    background-color: #191919;
-    color: #fff;
+    color: var(--black);
+    left: -2%;
+    top: 20%
 }

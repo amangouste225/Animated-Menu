@@ -6,7 +6,7 @@ export const Home = () => {
       <div className="h-full flex justify-start items-center wrapper">
         <h1 className="max-4xl">
           <div className="text-xl font-semibold lg:text-3xl md:text-2xl">
-            The{" "}
+            The
             <span className="font-secondary uppercase logo_hover">hambrg</span>,
             is a creative, engineer driven,
           </div>
@@ -17,14 +17,14 @@ export const Home = () => {
             and design communities to new heights.
           </div>
         </h1>
-        <p className="absolute bottom-5 z-50 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-5 z- left-1/2 -translate-x-1/2">
           <div className="animate-bounce">
             Designed by{" "}
             <Link to="https://www.linkedin.com/in/angethierry/" target="/">
               <span className="font-bold">Amangoua</span>
             </Link>
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );
