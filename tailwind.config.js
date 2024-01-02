@@ -20,8 +20,11 @@ export default {
         "3xl": "1600px",
       },
       fontSize: {
+        "10xl": "70px",
+        "8xl": "60px",
+        "6xl": "45px",
         "3xl": "30px",
-        "2xl": "25px",
+        "2xl": "23px",
         xl: "20px",
         lg: "18px",
         md: "16px",

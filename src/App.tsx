@@ -3,9 +3,11 @@ import { Home } from "./pages/Home";
 import { Header } from "./components/Header";
 
 import "./global.css";
+import { Hamburger } from "./components/Hamburger";
 
 export const App = () => (
   <Router>
+    <Hamburger />
     <Header />
     <main>
       <Routes>

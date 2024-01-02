@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Home = () => {
   return (
     <div className="h-screen">
@@ -12,9 +14,17 @@ export const Home = () => {
             global agency working on advancing the software
           </div>
           <div className="text-xl font-semibold lg:text-3xl md:text-2xl">
-            and design communities to new heights
+            and design communities to new heights.
           </div>
         </h1>
+        <p className="absolute bottom-5 z-50 left-1/2 -translate-x-1/2">
+          <div className="animate-bounce">
+            Designed by{" "}
+            <Link to="https://www.linkedin.com/in/angethierry/" target="/">
+              <span className="font-bold">Amangoua</span>
+            </Link>
+          </div>
+        </p>
       </div>
     </div>
   );

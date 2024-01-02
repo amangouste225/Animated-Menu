@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@800;900&display=swap');
 
 :root {
+    --white: #f7f1f1;
     --red: #e20001;
     --black: #191919;
     --font-primary: 'Manrope';
-    --font-secondary: 'Poppins'
+    --font-secondary: 'Poppins';
+
 }
 
 html,
@@ -26,7 +28,7 @@ body {
     content: '';
     width: 50px;
     height: 4px;
-    background-color: var(--red);
+    background-color: var(--black);
     position: absolute;
     top: 100%
 }
@@ -41,10 +43,10 @@ body {
     position: absolute;
     width: 100%;
     background-color: var(--black);
-    height: 2px;
+    height: 1px;
     content: '';
-    bottom: 2%;
-    z-index: -1;
+    bottom: 5%;
+    z-index: 0;
     left: 0%;
 }
 
