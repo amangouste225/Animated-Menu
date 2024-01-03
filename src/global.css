@@ -15,22 +15,27 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: var(--font-primary);
+    animation: all .4s ease-in-out;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.03em;
 
 }
 
 .wrapper {
     margin: 0 auto;
     max-width: 1440px;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 .logo_black::before {
     content: '';
-    width: 50px;
+    width: 100%;
     height: 4px;
     background-color: var(--black);
     position: absolute;
-    top: 100%;
+    bottom: 10%;
+
 }
 
 .logo_white::before {
@@ -44,20 +49,54 @@ body {
 
 .logo_hover {
     position: relative;
-    padding: 0 5px;
+    padding: 0 2px;
+    display: inline-block;
+    transition: color .5s,
+        text-shadow .5s;
+    text-decoration: none;
+}
+
+.logo_hover:hover {
+    background-color: var(--red);
+    color: var(--white) !important;
+}
+
+.logo_hover::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--black);
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+}
+
+
+.menuIds {
+    font-size: 15px;
+    position: absolute;
+    left: 5px;
+    top: -30px;
+    transition: .3s ease-in-out;
+    font-weight: 700;
+    position: relative;
+    color: var(--white);
+}
+
+.cities {
+    transition: .3s ease-in-out;
     display: inline;
 }
 
-
-
-.menuIds {
-    position: relative;
+.menuNav {
+    text-shadow: 1px 0 var(--white), -1px 0 var(--white), 0 1px var(--white), 0 -1px var(--white),
+        1px 1px var(--white), -1px -1px var(--white), 1px -1px var(--white), -1px 1px var(--white);
+    transition: all 0.5s ease-in-out;
+    color: var(--red);
+    overflow: hidden;
+    height: 100px;
 }
 
-.menuIds {
-    font-size: 20px;
-    position: absolute;
-    color: var(--black);
-    left: -2%;
-    top: 20%
+.menuNav:hover {
+    color: var(--white);
 }
